@@ -17,7 +17,6 @@ class Todo {
     });
 
     this._todoDeleteBtn.addEventListener("click", (evt) => {
-      console.log(evt.target);
       this._handleDelete(false);
       this._remove();
     });
@@ -37,9 +36,8 @@ class Todo {
   };
 
   _remove = () => {
-    console.log(this._todoElement);
     this._todoElement.remove();
-    this._todoElement.null();
+    this._todoElement = null;
   };
 
   _generateDateEl() {
